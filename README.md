@@ -61,6 +61,37 @@ npx expo start
 The `API_URL` in `app/App.tsx` is configured to use the production backend on Render (`https://fitness-ai-chatbot-backend.onrender.com/chat`).
 - **If you want to use a local backend**, update `API_URL` to `http://10.254.200.254:3000/chat` (or your machine's IP).
 
+## Publishing (Build for App Store/Play Store)
+
+This project is configured for **EAS Build** (Expo Application Services).
+
+1.  **Install EAS CLI**:
+    ```bash
+    npm install -g eas-cli
+    ```
+
+2.  **Login to Expo**:
+    ```bash
+    eas login
+    ```
+
+3.  **Configure Build**:
+    ```bash
+    eas build:configure
+    ```
+
+4.  **Create a Build**:
+    - **Android (APK/AAB)**:
+      ```bash
+      eas build --platform android
+      ```
+    - **iOS (IPA - requires Developer Account)**:
+      ```bash
+      eas build --platform ios
+      ```
+
+For more details, see the [Expo Build Documentation](https://docs.expo.dev/build/introduction/).
+
 ## Important Disclaimers
 This is an AI experiment, **not a medical device**.
 - It does **not** diagnose injuries.
