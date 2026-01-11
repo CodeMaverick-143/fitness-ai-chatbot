@@ -2,6 +2,9 @@
 
 A personalized fitness companion built with React Native (Expo) and powered by **Google Gemini**.
 
+> Download APK: [fitmess.apk](https://github.com/CodeMaverick-143/fitness-ai-chatbot/releases/download/v.1.0.1/application-81b74734-d470-49e4-83d9-4f3aca4148b7.apk)
+
+
 ## Features
 
 - **AI-Powered Chat**: Uses `gemini-flash-latest` for responsive, context-aware fitness advice.
