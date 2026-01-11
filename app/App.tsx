@@ -17,7 +17,7 @@ import {
     View,
 } from 'react-native';
 
-const API_URL = "http://10.254.200.254:3000/chat";
+const API_URL = "https://fitness-ai-chatbot-backend.onrender.com/chat";
 
 interface Lifestyle {
     steps: number;

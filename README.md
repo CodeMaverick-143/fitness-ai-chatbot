@@ -58,8 +58,8 @@ npx expo start
 ```
 
 **Connectivity Note:**
-The `API_URL` in `app/App.tsx` is configured to use your machine's LAN IP (`10.254.200.254`) to ensure accessibility from Android Emulators and physical devices.
-- **If your IP changes**, update `API_URL` to match your machine's local IP address.
+The `API_URL` in `app/App.tsx` is configured to use the production backend on Render (`https://fitness-ai-chatbot-backend.onrender.com/chat`).
+- **If you want to use a local backend**, update `API_URL` to `http://10.254.200.254:3000/chat` (or your machine's IP).
 
 ## Important Disclaimers
 This is an AI experiment, **not a medical device**.

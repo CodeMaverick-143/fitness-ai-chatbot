@@ -11,7 +11,6 @@ const prisma = new PrismaClient();
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 const model = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
 
-// Debug: Check if API Key is loaded
 if (!process.env.GEMINI_API_KEY) {
     console.warn("WARNING: No Gemini API Key found in environment variables!");
 } else {
@@ -31,6 +30,11 @@ interface ChatRequest {
         exerciseMinutes: number;
     };
 }
+
+app.head("/", (req: express.Request, res: express.Response): void => {
+    res.status(200).send();
+});
+
 
 app.post("/chat", async (req: express.Request, res: express.Response): Promise<void> => {
     const { message, personality, daysUsed, lifestyle }: ChatRequest = req.body;
@@ -94,7 +98,6 @@ app.post("/chat", async (req: express.Request, res: express.Response): Promise<v
         console.error("Gemini Status:", error.status);
         console.error("Gemini Message:", error.message);
 
-        // Fallback for demo purposes if API fails
         if (error) {
             console.log("Gemini API Error. Using Mock Fallback.");
 
