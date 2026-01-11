@@ -31,7 +31,7 @@ interface ChatRequest {
     };
 }
 
-app.head("/", (req: express.Request, res: express.Response): void => {
+app.head("/", (_req: express.Request, res: express.Response): void => {
     res.status(200).send();
 });
 
