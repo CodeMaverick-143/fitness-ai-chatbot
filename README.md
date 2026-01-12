@@ -61,7 +61,7 @@ npx expo start
 ```
 
 **Connectivity Note:**
-The `API_URL` in `app/App.tsx` is configured to use the production backend on Render (`https://fitness-ai-chatbot-backend.onrender.com/chat`).
+The `API_URL` in `app/App.tsx` is configured to use the production backend on Render (`https://fitness-ai-chatbot-a7g3.onrender.com/chat`).
 - **If you want to use a local backend**, update `API_URL` to `http://10.254.200.254:3000/chat` (or your machine's IP).
 
 ## Publishing (Build for App Store/Play Store)
